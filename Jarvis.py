@@ -1,19 +1,19 @@
-import webbrowser                      \\For web crawling
-import requests                        \\For Handling Requests
-from bs4 import BeautifulSoup          \\Html parser
-import pyaudio as py                   \\Play and record audio
-import speech_recognition as sr        \\ For speech recognition
-import random                          \\ For randomising elements in the array
-import pyttsx3                         \\ text-to-speech conversion
-import datetime                        \\ Reading date and time
+import webbrowser                      # For web crawling
+import requests                        # For Handling Requests
+from bs4 import BeautifulSoup          # Html parser
+import pyaudio as py                   # Play and record audio
+import speech_recognition as sr        # For speech recognition
+import random                          # For randomising elements in the array
+import pyttsx3                         # text-to-speech conversion
+import datetime                        # Reading date and time
 
 
 # ------------Funtions to Speak-----------------------------------------------------------------------------------------
 
 def SpeakText(command):
 
-   engine = pyttsx3.init()          \\initializing pyttsx
-   engine.say(command)              \\listening for audio
+   engine = pyttsx3.init()          #initializing pyttsx
+   engine.say(command)              #listening for audio
    engine.runAndWait()
    
 # ------------Funtions to Search keyword in the Internet-----------------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ def Search():
    with sr.Microphone() as source:
       audio = r.listen(source)
       vim = r.recognize_google(audio)
-      webbrowser.open_new_tab("https://www.google.com/search?q=" + vim)  \\ Opens the browser
+      webbrowser.open_new_tab("https://www.google.com/search?q=" + vim)   #Opens the browser
       return
 
 # ------------Funtions to webcrawl news headlines from BBC News-----------------------------------------------------------------------------------------
@@ -42,12 +42,12 @@ def Date_and_time():
    return
 
 #-----------------------------------------------------------------------------------------------------------------------
-first = ["Hello Sir", "Welcome Sir","Welcome back Sir", "Good to See You Sir","Bonjour Sir","Hi there Sir","hola Sir","guten tag sir","salve sir","anyoung haseyo"] \\ Welcome Dataset Array
-intro=["Hello","Hey","Hai","Hi","what's up","Whatsup","you up","wake up"]     \\ Greet Dataset Array
-name=["Jarvis!","Don't you forget!, Your Assistant Jarvis","Its me Sir, Jarvis","Your Personal Assistant Jarvis","Hola, I am Jarvis","I am Jarvis, your assistant"] \\ Jarvis name Dataset Array
-url='https://www.bbc.com/news'  \\BBC News link
+first = ["Hello Sir", "Welcome Sir","Welcome back Sir", "Good to See You Sir","Bonjour Sir","Hi there Sir","hola Sir","guten tag sir","salve sir","anyoung haseyo"] # Welcome Dataset Array
+intro=["Hello","Hey","Hai","Hi","what's up","Whatsup","you up","wake up"]     # Greet Dataset Array
+name=["Jarvis!","Don't you forget!, Your Assistant Jarvis","Its me Sir, Jarvis","Your Personal Assistant Jarvis","Hola, I am Jarvis","I am Jarvis, your assistant"] # Jarvis name Dataset Array
+url='https://www.bbc.com/news'  #BBC News link
 response = requests.get(url)
-soup = BeautifulSoup(response.text, 'html.parser')  \\Reading the html body and finding all h3 tags
+soup = BeautifulSoup(response.text, 'html.parser')  #Reading the html body and finding all h3 tags
 headlines = soup.find('body').find_all('h3')
 r=sr.Recognizer()
 
