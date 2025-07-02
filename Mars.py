@@ -236,7 +236,7 @@ first = ["Hello Sir", "Welcome Sir","Welcome back Sir", "Good to See You Sir","B
 intro=["hello","hey","hai","hi","what's up","whatsup","you up","wake up"]     # Greet Dataset Array
 name=["MARS!","Don't you forget!, Your Assistant MARS","Its me Sir, MARS","Your Personal Assistant MARS","Hola, I am MARS","I am MARS, your assistant"] # MARS name Dataset Array
 url='https://www.bbc.com/news'  #BBC News link
-client = genai.Client(api_key="AIzaSyAQyq6J1bAqv8_yO8lDYysVKg2XEYaNATU")
+client = genai.Client(api_key="ADD_API_KEY_HERE")
 r=sr.Recognizer()
 
 #------------------------------------------Finding the Keyword from the User-----------------------------------------------------------------------
