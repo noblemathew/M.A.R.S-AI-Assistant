@@ -1,6 +1,6 @@
 # 🤖 M.A.R.S - Voice-Activated AI Assistant
 
-Jarvis is a voice-enabled AI assistant built in Python. It listens to your commands and performs actions like searching the internet, reading news headlines, telling the time, chatting with Gemini AI, and even controlling your computer (shutdown/sleep).
+M.A.R.S is a voice-enabled AI assistant built in Python. It listens to your commands and performs actions like searching the internet, reading news headlines, telling the time, chatting with Gemini AI, and even controlling your computer (shutdown/sleep).
 
 ## ✨ Features
 
